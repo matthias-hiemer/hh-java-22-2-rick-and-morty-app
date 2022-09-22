@@ -1131,6 +1131,6 @@ export default function App() {
     ]
 
     return (
-        <CharacterGallery characters={characters}/>
+        <CharacterGallery characters={characters} />
     );
 }
