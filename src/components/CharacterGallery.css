@@ -5,6 +5,11 @@
     justify-content: center;
 }
 
+.search-field{
+    margin-left:150px;
+    margin-top:50px;
+}
+
 .card {
     border: 1px solid black;
     margin: 1rem 1rem;
