@@ -16,7 +16,7 @@ export default function CharacterGallery(props : CharacterGalleryProps){
 
     return (
         <>
-            <input onChange={(event) => setFilterText(event.target.value)} />
+            <input className={"search-field"} onChange={(event) => setFilterText(event.target.value)} />
 
             <p>Typed in: {filterText}</p>
             <div className={"cards"}>
