@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react';
 import './App.css';
 import CharacterGallery from "./components/CharacterGallery";
 import axios from "axios";
+import { HashRouter, Route, Routes } from 'react-router-dom';
+import CharacterDetailsPage from './pages/CharacterDetailsPage';
 
 export default function App() {
 
@@ -21,7 +23,12 @@ export default function App() {
     
     return (
         <div>
-            <CharacterGallery characters={characters} />
+            <HashRouter>
+                <Routes>
+                    <Route path={"/"} element={<CharacterGallery characters={characters} />} />
+                    <Route path={"/character/:id"} element={<CharacterDetailsPage characters={characters} />} />
+                </Routes>
+            </HashRouter>
         </div>
     );
 }
